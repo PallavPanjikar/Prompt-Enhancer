@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Prompt Enhancer — Settings</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="pe-opts-wrap">
+    <div class="pe-opts-header">
+      <div class="pe-opts-title">✨ Prompt Enhancer — Settings</div>
+      <div class="pe-opts-sub">Your API key is stored only in this browser's local extension storage. It is sent directly to the provider you choose, never to any third-party server.</div>
+    </div>
+
+    <div class="pe-opts-card">
+      <label class="pe-opts-label">Provider</label>
+      <div class="pe-provider-toggle">
+        <button type="button" class="pe-provider-btn" id="btn-openai" data-provider="openai">OpenAI</button>
+        <button type="button" class="pe-provider-btn" id="btn-anthropic" data-provider="anthropic">Anthropic (Claude)</button>
+        <button type="button" class="pe-provider-btn" id="btn-gemini" data-provider="gemini">Gemini</button>
+      </div>
+
+      <label class="pe-opts-label" for="apiKey">API Key</label>
+      <input type="password" id="apiKey" class="pe-opts-input" placeholder="sk-... / sk-ant-..." autocomplete="off" />
+
+      <label class="pe-opts-label" for="model">Model <span class="pe-opts-hint">(optional override)</span></label>
+      <input type="text" id="model" class="pe-opts-input" placeholder="Using provider default" autocomplete="off" />
+      <div class="pe-opts-hint" id="model-hint"></div>
+
+      <div class="pe-opts-actions">
+        <button type="button" class="pe-btn pe-btn-primary" id="saveBtn">Save Settings</button>
+        <span class="pe-opts-status" id="status"></span>
+      </div>
+    </div>
+
+    <div class="pe-opts-footer">
+      Don't have a key? Get one from
+      <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>,
+      <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>,
+      or
+      <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com</a> (Gemini — has a free tier).
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

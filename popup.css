@@ -1,0 +1,6 @@
+html, body {
+  width: 380px;
+}
+#app {
+  min-height: 200px;
+}
